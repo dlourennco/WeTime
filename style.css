@@ -1,0 +1,63 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background: rgb(61, 60, 60);
+    background-repeat: no-repeat;
+    color: white;
+    font-family: sans-serif;
+}
+
+header {
+    padding-top: 5px;
+    text-align: center;
+}
+
+section {
+    padding-top: 250px;
+    padding-left: 160px;
+    display: flex;
+    align-items: center;
+}
+
+#clock {
+    font-size: 150pt;
+}
+
+.location {
+    height: 30vh;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.temperature-description {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding-top: 240px;
+    font-style: italic;
+}
+
+#credits {
+    padding-top: 25px;
+    padding-right: 25px;
+    text-align: end;
+}
+
+#github {
+    color: white;
+    font-style: italic;
+    font-size: 17pt;
+    text-decoration: none;
+}
