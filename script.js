@@ -10,17 +10,17 @@ function time() {
     let minutes = now.getMinutes()
 
     if (hour > 6 && hour < 12) { //dia
-        document.body.style.background = "url('Morning-Steven-Hylands.jpg')";
+        document.body.style.background = "url('../images/Morning-Steven-Hylands.jpg')";
         credits.innerHTML = 'photo by <strong>Steven Hylands</strong>';
     } else if (hour >= 12 && hour < 18) { //tarde
-        document.body.style.background = "url('Evening-Indra-Gunawan.jpg')";
-        credits.innerHTML = 'photo by <strong>Indra Gunawan</strong>';
+        document.body.style.background = "url('../images/Afternoon-Essow-Kedelina.jpg')";
+        credits.innerHTML = 'photo by <strong>Essow Kedelina</strong> from <strong>Pexels</strong>';
     } else if (hour >= 18 && hour < 24) { //noite
-        document.body.style.background = "url('Night-Caio-Queiroz.jpg')";
-        credits.innerHTML = 'photo by <strong>Caio Queiroz</strong>';
+        document.body.style.background = "url('../images/Night-Caio-Queiroz.jpg')";
+        credits.innerHTML = 'photo by <strong>Caio Queiroz</strong> from <strong>Pexels</strong>';
     } else if (hour >= 00 && hour < 6) { //madrugada
-        document.body.style.background = "url('Night-Caio-Queiroz.jpg')";
-        credits.innerHTML = 'photo by <strong>Caio Queiroz</strong>';
+        document.body.style.background = "url('../images/Night-Caio-Queiroz.jpg')";
+        credits.innerHTML = 'photo by <strong>Caio Queiroz</strong> from <strong>Pexels</strong>';
     }
 
     if (minutes < 10) {
@@ -28,8 +28,6 @@ function time() {
     } else {
         clock.innerHTML = `${hour}h${minutes}`
     }
-    
-    
 }
 
 window.addEventListener("load", () => {
@@ -54,16 +52,21 @@ window.addEventListener("load", () => {
             })
             .then(data => {
                 console.log(data);
-                const { temperature, summary } = data.currently; //pega a temperatura do data.currently
-                //muda os elementos da DOM a partir da API
+                const { temperature, summary, icon } = data.currently; //pega a temperatura do data.currently
+                //muda os elementos da DOM a partir dos dados recebidos pela API
                 temperatureDegree.textContent = temperature;
                 temperatureDescription.textContent = summary;
                 locationTimezone.textContent = data.timezone;
-            
-            
+                
+                    setIcons(icon, document.querySelector('.icon'))
             });
         });
-
-
+    }
+    //icones
+    function setIcons (icon, iconID) {
+        const skycons = new Skycons({color: "white"});
+        const currentIcon = icon.replace(/-/g, "_").toUpperCase(); // procura todas as linhas com "-" e substitui por "_"
+        skycons.play();
+        return skycons.set(iconID, Skycons[currentIcon]);
     }
 });

@@ -21,7 +21,7 @@ header {
 
 section {
     padding-top: 250px;
-    padding-left: 160px;
+    padding-left: 80px;
     display: flex;
     align-items: center;
 }
@@ -36,10 +36,14 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
-.temperature-description {
+canvas.icon {
+    text-align: center;
+}
+
+.temperature {
+    padding-left: 100px;
     text-align: center;
 }
 
@@ -50,7 +54,7 @@ footer {
 }
 
 #credits {
-    padding-top: 25px;
+    padding-top: 18px;
     padding-right: 25px;
     text-align: end;
 }
