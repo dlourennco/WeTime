@@ -15,12 +15,12 @@ body {
 }
 
 header {
-    padding-top: 5px;
+    padding: 15px;
     text-align: center;
 }
 
 section {
-    padding-top: 250px;
+    padding-top: 220px;
     padding-left: 80px;
     display: flex;
     align-items: center;
@@ -28,6 +28,7 @@ section {
 
 #clock {
     font-size: 150pt;
+    padding-right: 200px;
 }
 
 .location {
@@ -38,13 +39,22 @@ section {
     align-items: center;
 }
 
+.location-timezone {
+    padding-right: 120px;
+}
+
 canvas.icon {
-    text-align: center;
+    align-items: center;
 }
 
 .temperature {
-    padding-left: 100px;
+    font-size: 40pt;
+    padding-left: 80px;
     text-align: center;
+}
+
+.temperature-description {
+    font-size: 17pt;
 }
 
 footer {

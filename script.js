@@ -10,17 +10,17 @@ function time() {
     let minutes = now.getMinutes()
 
     if (hour > 6 && hour < 12) { //dia
-        document.body.style.background = "url('../images/Morning-Steven-Hylands.jpg')";
-        credits.innerHTML = 'photo by <strong>Steven Hylands</strong>';
+        document.body.style.background = "url('../images/Morning-brotiN-biswaS.jpg')";
+        credits.innerHTML = 'photo by <strong>brotiN biswaS</strong> from <strong>Pexels</strong>';
     } else if (hour >= 12 && hour < 18) { //tarde
         document.body.style.background = "url('../images/Afternoon-Essow-Kedelina.jpg')";
         credits.innerHTML = 'photo by <strong>Essow Kedelina</strong> from <strong>Pexels</strong>';
     } else if (hour >= 18 && hour < 24) { //noite
-        document.body.style.background = "url('../images/Night-Caio-Queiroz.jpg')";
-        credits.innerHTML = 'photo by <strong>Caio Queiroz</strong> from <strong>Pexels</strong>';
+        document.body.style.background = "url('../images/Night-Mauricio-Mascaro.jpg')";
+        credits.innerHTML = 'photo by <strong>Maurício Mascaro</strong> from <strong>Pexels</strong>';
     } else if (hour >= 00 && hour < 6) { //madrugada
-        document.body.style.background = "url('../images/Night-Caio-Queiroz.jpg')";
-        credits.innerHTML = 'photo by <strong>Caio Queiroz</strong> from <strong>Pexels</strong>';
+        document.body.style.background = "url('../images/Code-Gally.jpg')";
+        credits.innerHTML = 'photo by <strong>Gally</strong> from <strong>Pexels</strong>';
     }
 
     if (minutes < 10) {
