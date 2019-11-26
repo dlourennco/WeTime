@@ -40,6 +40,7 @@ section {
 }
 
 .location-timezone {
+    font-size: 25pt;
     padding-right: 120px;
 }
 
@@ -58,20 +59,16 @@ canvas.icon {
 }
 
 footer {
-    text-align: center;
-    padding-top: 240px;
-    font-style: italic;
+    padding-top: 250px;
+    padding-left: 20px;
 }
 
-#credits {
-    padding-top: 18px;
-    padding-right: 25px;
-    text-align: end;
+span#credits {
+    padding-left: 1420px;
+    text-align: center;
 }
 
 #github {
-    color: white;
-    font-style: italic;
-    font-size: 17pt;
-    text-decoration: none;
+    height: 48px;
+    width: 48px;
 }

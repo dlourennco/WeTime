@@ -16,8 +16,8 @@ function time() {
         document.body.style.background = "url('../images/Afternoon-Essow-Kedelina.jpg')";
         credits.innerHTML = 'photo by <strong>Essow Kedelina</strong> from <strong>Pexels</strong>';
     } else if (hour >= 18 && hour < 24) { //noite
-        document.body.style.background = "url('../images/Night-Mauricio-Mascaro.jpg')";
-        credits.innerHTML = 'photo by <strong>Maurício Mascaro</strong> from <strong>Pexels</strong>';
+        document.body.style.background = "url('../images/Night-Irina-Iriser.jpg')";
+        credits.innerHTML = 'photo by <strong>Irina Iriser</strong> from <strong>Pexels</strong>';
     } else if (hour >= 00 && hour < 6) { //madrugada
         document.body.style.background = "url('../images/Code-Gally.jpg')";
         credits.innerHTML = 'photo by <strong>Gally</strong> from <strong>Pexels</strong>';
