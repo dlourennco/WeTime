@@ -1,11 +1,11 @@
 window.addEventListener("load", () => {
     let long;
     let lat;
-    //seta as informações de clima
-    let temperatureDescription = document.querySelector('.temperature-description');
-    let temperatureDegree = document.querySelector('.temperature-degree');
-    let locationTimezone = document.querySelector('.location-timezone');
-    //pega a localização
+    
+    let getTemperatureDescription = document.querySelector('.temperature-description');
+    let getTemperatureDegree = document.querySelector('.temperature-degree');
+    let getLocationTimezone = document.querySelector('.location-timezone');
+    
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
             long = position.coords.longitude;
@@ -16,15 +16,15 @@ window.addEventListener("load", () => {
 
             fetch(api)
                 .then(response => {
-                    return response.json(); //pega a api e transforma em um json
+                    return response.json();
             })
             .then(data => {
                 console.log(data);
-                const { temperature, summary, icon } = data.currently; //pega a temperatura do data.currently
+                const { temperature, summary, icon } = data.currently; //pega a temperatura, summary e icone do data.currently
                 //muda os elementos da DOM a partir dos dados recebidos pela API
-                temperatureDegree.textContent = temperature;
-                temperatureDescription.textContent = summary;
-                locationTimezone.textContent = data.timezone;
+                getTemperatureDegree.textContent = temperature;
+                getTemperatureDescription.textContent = summary;
+                getLocationTimezone.textContent = data.timezone;
                 
                     setIcons(icon, document.querySelector('.icon'))
             });
@@ -33,7 +33,7 @@ window.addEventListener("load", () => {
     //icones
     function setIcons (icon, iconID) {
         const skycons = new Skycons({color: "white"});
-        const currentIcon = icon.replace(/-/g, "_").toUpperCase(); // procura todas as linhas com "-" e substitui por "_"
+        const currentIcon = icon.replace(/-/g, "_").toUpperCase();
         skycons.play();
         return skycons.set(iconID, Skycons[currentIcon]);
     }
