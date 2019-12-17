@@ -1,4 +1,39 @@
 * {
+    display: flex;
+    height: auto;
+    width: auto;
+    margin: 0px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    margin: 10px;
+}
+body {
+    flex-direction: column;
+}
+
+section {
+    height: 500px;
+    width: 1366px;
+}
+
+div#content {
+    width: 1366px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#clock {
+    font-size: 110pt;
+}
+
+#temperature {
+    font-size: 40pt;
+}
+
+/* * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -71,4 +106,4 @@ span#credits {
 #github {
     height: 48px;
     width: 48px;
-}
+} */

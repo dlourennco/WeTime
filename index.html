@@ -4,30 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WeTime: Time and Weather</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="">
 </head>
 <body onload="time()"> <!--ao carregar, roda a função time(relógio)-->
     <header>
-        <img src="../icons/logo.png" align="left">
+        <img id="logo" src="../icons/logo.png" align="left">
     </header>
 
     <section>
-        <div id="clock">
-            time
-        </div>
-        <!--clima-->
-        <div class="location">
-            <h1 class="location-timezone">Timezone</h1>
-            <canvas class="icon" width="128" height="128"></canvas>
+        <div id="content">
+            <div id="clock">
+                time
+            </div>
+            <!--clima-->
+            <div class="location">
+                <h1 class="location-timezone">Timezone</h1>
+            </div>
 
             <div class="temperature">
                 <h2 class="temperature-degree">34</h2>
                 <div class="temperature-description">Description</div>
+            </div id="icon">
+                <canvas class="icon" width="128" height="128"></canvas>
             </div>
-        </div>
 
+        </div>
     </section>
 
     <footer>
