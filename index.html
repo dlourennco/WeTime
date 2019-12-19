@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="">
 </head>
-<body onload="time()"> <!--ao carregar, roda a função time(relógio)-->
+<body onload="time()">
     <header>
         <img id="logo" src="../icons/logo.png" align="left">
     </header>
@@ -17,7 +17,7 @@
             <div id="clock">
                 time
             </div>
-            <!--clima-->
+            
             <div class="location">
                 <h1 class="location-timezone">Timezone</h1>
             </div>
@@ -25,19 +25,18 @@
             <div class="temperature">
                 <h2 class="temperature-degree">34</h2>
                 <div class="temperature-description">Description</div>
-            </div id="icon">
-                <canvas class="icon" width="128" height="128"></canvas>
             </div>
 
+            <canvas class="icon" width="256" height="256"></canvas>
         </div>
     </section>
 
     <footer>
-        <div>
+        <div id="footer">
             <a href="https://github.com/dlourennco" target="_blank">
-                <img id="github" style="vertical-align: middle"src="../icons/github-logo.png">
+                <img id="github" width="15" height="15"style="vertical-align: middle"src="../icons/github-logo.png">
             </a>
-            <span id="credits">credits</span>
+            <span id="credits" align="right">credits</span>
         </div>
     </footer>
 

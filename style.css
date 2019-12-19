@@ -1,109 +1,70 @@
 * {
+    box-sizing: border-box;
     display: flex;
     height: auto;
     width: auto;
-    margin: 0px;
+    margin: 0;
+    background-repeat: no-repeat;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
     margin: 10px;
+    height: 12.66%;
+    width:  12.66%;
+    border: 1px solid violet;
 }
 body {
+    height: auto;
+    width: 100%;
     flex-direction: column;
+    border: 1px solid green;
 }
 
 section {
-    height: 500px;
-    width: 1366px;
+    padding-top: 24vh;
+    height: 100%;
+    width: 100%;
+    border: 1px solid orange;
 }
 
 div#content {
-    width: 1366px;
+    width: 100%;
     justify-content: space-around;
+    align-content: center;
     align-items: center;
+    border: 1px solid red;
 }
 
 #clock {
     font-size: 110pt;
 }
 
-#temperature {
-    font-size: 40pt;
-}
-
-/* * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    background: rgb(61, 60, 60);
-    background-repeat: no-repeat;
-    color: white;
-    font-family: sans-serif;
-}
-
-header {
-    padding: 15px;
-    text-align: center;
-}
-
-section {
-    padding-top: 220px;
-    padding-left: 80px;
-    display: flex;
-    align-items: center;
-}
-
-#clock {
-    font-size: 150pt;
-    padding-right: 200px;
-}
-
-.location {
-    height: 30vh;
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.location-timezone {
-    font-size: 25pt;
-    padding-right: 120px;
-}
-
-canvas.icon {
-    align-items: center;
-}
-
 .temperature {
-    font-size: 40pt;
-    padding-left: 80px;
-    text-align: center;
+    font-size: 15pt;
+    flex-direction: column;
+    align-items: center;
 }
 
-.temperature-description {
-    font-size: 17pt;
+.temperature-degree {
+    font-size: 70pt;
 }
 
-footer {
-    padding-top: 250px;
-    padding-left: 20px;
+.icon {
+    height: 150px;
+    width: 150px;
 }
 
-span#credits {
-    padding-left: 1420px;
-    text-align: center;
+div#footer {
+    padding-top: 28vh;
+    align-items: center;
+}
+
+#credits {
+    padding-left: 10px;
 }
 
 #github {
-    height: 48px;
-    width: 48px;
-} */
+    padding-left: 15px;
+}
