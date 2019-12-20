@@ -9,6 +9,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+@media only screen and (min-width: 1920) {
+    section {
+        padding-top: 26vh;
+    }
+}
+
 header {
     margin: 10px;
     height: 12.66%;
@@ -51,20 +57,28 @@ div#content {
     font-size: 70pt;
 }
 
+#fahrenheit {
+    font-size: 25pt;
+}
+
 .icon {
     height: 150px;
     width: 150px;
+    border: 1pt solid blue;
 }
 
 div#footer {
-    padding-top: 28vh;
+    padding-top: 31vh;
     align-items: center;
 }
 
 #credits {
-    padding-left: 10px;
+    padding-left: 975px;
 }
 
 #github {
+    width: 70%;
+    height: 70%;
     padding-left: 15px;
+    border: 1pt solid blueviolet;
 }

@@ -5,6 +5,8 @@ window.addEventListener("load", () => {
     let getTemperatureDescription = document.querySelector('.temperature-description');
     let getTemperatureDegree = document.querySelector('.temperature-degree');
     let getLocationTimezone = document.querySelector('.location-timezone');
+    let degreeSection = document.querySelector('.degree-section');
+    let temperatureSpan = document.querySelector('.temperature-span')
     
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
@@ -25,8 +27,20 @@ window.addEventListener("load", () => {
                 getTemperatureDegree.textContent = temperature;
                 getTemperatureDescription.textContent = summary;
                 getLocationTimezone.textContent = data.timezone;
+
+                let celsius = (temperature - 32) * (5 / 9)
                 
                     setIcons(icon, document.querySelector('.icon'))
+
+                degreeSection.addEventListener('click', () => {
+                    if(temperatureSpan.textContent === 'ºF'){
+                        temperatureSpan.textContent = 'ºC';
+                        getTemperatureDegree.textContent = celsius;
+                    } else {
+                        temperatureSpan.textContent = 'ºF';
+                        getTemperatureDegree.textContent = temperature;
+                    }
+                });
             });
         });
     }
