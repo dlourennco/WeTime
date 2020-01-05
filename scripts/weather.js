@@ -35,7 +35,7 @@ window.addEventListener("load", () => {
                 degreeSection.addEventListener('click', () => {
                     if(temperatureSpan.textContent === 'ºF'){
                         temperatureSpan.textContent = 'ºC';
-                        getTemperatureDegree.textContent = celsius;
+                        getTemperatureDegree.textContent = Math.floor(celsius);
                     } else {
                         temperatureSpan.textContent = 'ºF';
                         getTemperatureDegree.textContent = temperature;
