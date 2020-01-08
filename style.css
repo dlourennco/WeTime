@@ -19,20 +19,17 @@ header {
     margin: 10px;
     height: 12.66%;
     width:  12.66%;
-    border: 1px solid violet;
 }
 body {
     height: auto;
     width: 100%;
     flex-direction: column;
-    border: 1px solid green;
 }
 
 section {
     padding-top: 24vh;
     height: 100%;
     width: 100%;
-    border: 1px solid orange;
 }
 
 div#content {
@@ -40,7 +37,6 @@ div#content {
     justify-content: space-around;
     align-content: center;
     align-items: center;
-    border: 1px solid red;
 }
 
 #clock {
@@ -64,7 +60,6 @@ div#content {
 .icon {
     height: 150px;
     width: 150px;
-    border: 1pt solid blue;
 }
 
 div#footer {
@@ -80,5 +75,4 @@ div#footer {
     width: 70%;
     height: 70%;
     padding-left: 15px;
-    border: 1pt solid blueviolet;
 }
