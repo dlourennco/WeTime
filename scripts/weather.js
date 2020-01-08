@@ -24,12 +24,13 @@ window.addEventListener("load", () => {
                 console.log(data);
                 const { temperature, summary, icon } = data.currently; //pega a temperatura, summary e icone do data.currently
                 //muda os elementos da DOM a partir dos dados recebidos pela API
-                getTemperatureDegree.textContent = temperature;
+                
+                let celsius = (temperature - 32) * (5 / 9)
+
+                getTemperatureDegree.textContent = Math.floor(celsius);
                 getTemperatureDescription.textContent = summary;
                 getLocationTimezone.textContent = data.timezone;
 
-                let celsius = (temperature - 32) * (5 / 9)
-                
                     setIcons(icon, document.querySelector('.icon'))
 
                 degreeSection.addEventListener('click', () => {
